@@ -5,7 +5,7 @@ client = pymongo.MongoClient("localhost", 27017)
 
 db = client['python']
 
-log_data = {"index": int, "smtp_check": bool, "vote": str, "data": {}}
+log_data = {"index": int, "smtp_check": bool, "vote": str, "email": str, "user": str, "data": {}}
 
 blogers_data = db.blogers_data
 

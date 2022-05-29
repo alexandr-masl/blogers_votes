@@ -12,16 +12,17 @@ def verify_email(mail):
             
             print("----- FULL DATA")
             print(str(data))
-
+            
             return {
-                "email_adress": data.email_address,
-                "format": data.format_check,
-                "dns": data.dns_check,
-                "smtp": data.smtp_check,
-                "catch all": data.catch_all_check,
-                "disposable": data.disposable_check,
-                "free: ": data.free_check,
-                # "last_audit_date": data.audit.audit_updated_date     
+                
+                "email_adress": data.email_address if data.email_address else None,
+                "format": data.format_check if data.format_check else None,
+                "dns": data.dns_check if data.dns_check else None,
+                "smtp": data.smtp_check if data.smtp_check else None,
+                "catch all": data.catch_all_check if data.catch_all_check else None,
+                "disposable": data.disposable_check if data.disposable_check else None,
+                "free: ": data.free_check if data.free_check else None,
+                "last_audit_date": data.audit.audit_updated_date if data.audit.audit_updated_date else None
             }
             
         except exceptions.HttpException:

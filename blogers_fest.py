@@ -38,7 +38,18 @@ for index, row in work_data_frame[checked_users:].iterrows():
         
     validation_result = verifer.verify_email(email)  
     
-    log_data = {"index": index, "smtp_check": validation_result["smtp"], "vote": vote, "data": validation_result}
+    log_data = {
+        "index": index, 
+        "smtp_check": validation_result["smtp"], 
+        "vote": vote, 
+        "email": email, 
+        "user": user, 
+        "data": validation_result
+    }
+    
+    
+    print("--- LOGGING DATA")
+    print(log_data)
     
     db.add_user(log_data)
     
