@@ -35,11 +35,8 @@ for index, row in work_data_frame[checked_users:].iterrows():
     vote = row['vote']
     
     print("\nCHECKING ... Mail", email, "User", user, "Index:", index)
-    
+        
     validation_result = verifer.verify_email(email)  
-    
-    # print("-- VALIDATION RES")
-    # print(validation_result)    
     
     log_data = {"index": index, "smtp_check": validation_result["smtp"], "vote": vote, "data": validation_result}
     

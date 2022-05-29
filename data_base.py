@@ -38,5 +38,9 @@ if __name__ == "__main__":
     users_data = get_users_data()
 
     print("----- Got", len(users_data), "accounts")
-    # print("----- USERS DATA -------")
-    # print(users_data)
+    
+    unvalid_emails = list(filter(lambda x: ( not x['smtp_check'] ), users_data))
+        
+    print("----- UNVALID EMAILS:", len(unvalid_emails), "percents:", str((len(unvalid_emails)/len(users_data)) * 100 ) +"%" )
+    
+    # print("----- Unvalid %: ", ( (len(unvalid_emails)/len(users_data)) * 100 ))
