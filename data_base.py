@@ -54,7 +54,7 @@ if __name__ == "__main__":
         blogger_valid_votes = len(blogger) - len(blogger_unvalid_mails)
         blogger_valid_result = (blogger_valid_votes / valid_emails_amount) * 100
 
-        print(name, "--total votes:", len(blogers_data), "--unvalid votes:", len(blogger_unvalid_mails), "--valid votes:", blogger_valid_votes)
+        print(name, "--total votes:", len(blogger), "--unvalid votes:", len(blogger_unvalid_mails), "--valid votes:", blogger_valid_votes)
         print("--- VALID RESULT:", str(blogger_valid_result)+"%")
         print("\n")
         
