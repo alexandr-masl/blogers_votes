@@ -40,14 +40,26 @@ if __name__ == "__main__":
     print("----- TOTAL VERIFED EMAILS:", len(users_data))
     
     unvalid_emails = list(filter(lambda x: ( not x['smtp_check'] ), users_data))
+    
+    valid_emails_amount = len(users_data) - len(unvalid_emails)
         
-    print("----- UNVALID EMAILS:", len(unvalid_emails), "percents:", str((len(unvalid_emails)/len(users_data)) * 100 ) +"%" )
+    print("----- UNVALID EMAILS:", len(unvalid_emails), "percents:", str((len(unvalid_emails)/len(users_data)) * 100 ) +"%", "\n\n")
     
-    project_wahba = list(filter(lambda x: ( "WAHBA" in x['vote']), users_data))
+    bloggers = ["PROJECT WAHBA", "CHRISTIAN BETZMANN ", "AZUL MISTICO", "LOS FAMILUKIS", "TEAM MARVE", "MAN VS BABY", "BOB THISSEN", "DABBLE AND TRAVEL", "GIRL VS GLOBE", "BACKPACKER STEVE"]
     
-    project_wahba_unvalid_mails = list(filter(lambda x: ( not x['smtp_check'] ), project_wahba))
+    for name in bloggers:
+        
+        blogger = list(filter(lambda x: (name in x['vote']), users_data))
+        blogger_unvalid_mails = list(filter(lambda x: ( not x['smtp_check'] ), blogger))
+        blogger_valid_votes = len(blogger) - len(blogger_unvalid_mails)
+        blogger_valid_result = (blogger_valid_votes / valid_emails_amount) * 100
+
+        print(name, "--total votes:", len(blogers_data), "--unvalid votes:", len(blogger_unvalid_mails), "--valid votes:", blogger_valid_votes)
+        print("--- VALID RESULT:", str(blogger_valid_result)+"%")
+        print("\n")
+        
+        
     
-    print("PROJECT WAHBA ‘AHMED WAHBA’        Total Votes:", len(project_wahba), "Unvalid Votes:", len(project_wahba_unvalid_mails), "Valid Votes", len(project_wahba) - len(project_wahba_unvalid_mails))
-    
+
     
     
