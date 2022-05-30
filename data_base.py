@@ -45,7 +45,7 @@ if __name__ == "__main__":
         
     print("----- UNVALID EMAILS:", len(unvalid_emails), "percents:", str((len(unvalid_emails)/len(users_data)) * 100 ) +"%", "\n\n")
     
-    bloggers = ["PROJECT WAHBA", "CHRISTIAN BETZMANN ", "AZUL MISTICO", "LOS FAMILUKIS", "TEAM MARVE", "MAN VS BABY", "BOB THISSEN", "DABBLE AND TRAVEL", "GIRL VS GLOBE", "BACKPACKER STEVE"]
+    bloggers = ["PROJECT WAHBA", "BETZMANN ", "AZUL MISTICO", "LOS FAMILUKIS", "TEAM MARVE", "MAN VS BABY", "BOB THISSEN", "DABBLE AND TRAVEL", "GIRL VS GLOBE", "BACKPACKER STEVE"]
     
     for name in bloggers:
         
