@@ -40,7 +40,7 @@ for index, row in work_data_frame[checked_users:].iterrows():
     
     log_data = {
         "index": index, 
-        "smtp_check": validation_result["smtp"], 
+        "smtp_check": validation_result["smtp"] if validation_result else None, 
         "vote": vote, 
         "email": email, 
         "user": user, 

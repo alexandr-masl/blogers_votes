@@ -37,10 +37,17 @@ if __name__ == "__main__":
     
     users_data = get_users_data()
 
-    print("----- Got", len(users_data), "accounts")
+    print("----- TOTAL VERIFED EMAILS:", len(users_data))
     
     unvalid_emails = list(filter(lambda x: ( not x['smtp_check'] ), users_data))
         
     print("----- UNVALID EMAILS:", len(unvalid_emails), "percents:", str((len(unvalid_emails)/len(users_data)) * 100 ) +"%" )
     
-    # print("----- Unvalid %: ", ( (len(unvalid_emails)/len(users_data)) * 100 ))
+    project_wahba = list(filter(lambda x: ( "WAHBA" in x['vote']), users_data))
+    
+    project_wahba_unvalid_mails = list(filter(lambda x: ( not x['smtp_check'] ), project_wahba))
+    
+    print("PROJECT WAHBA ‘AHMED WAHBA’        Total Votes:", len(project_wahba), "Unvalid Votes:", len(project_wahba_unvalid_mails), "Valid Votes", len(project_wahba) - len(project_wahba_unvalid_mails))
+    
+    
+    
