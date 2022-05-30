@@ -43,7 +43,7 @@ if __name__ == "__main__":
     
     valid_emails_amount = len(users_data) - len(unvalid_emails)
         
-    print("----- UNVALID EMAILS:", len(unvalid_emails), "percents:", str((len(unvalid_emails)/len(users_data)) * 100 ) +"%", "\n\n")
+    print("----- UNVALID EMAILS:", len(unvalid_emails), "|", str((len(unvalid_emails)/len(users_data)) * 100 ) +"%", "\n\n")
     
     bloggers = ["CHRISTIAN BETZMANN", "AZUL MISTICO", "PROJECT WAHBA", "LOS FAMILUKIS", "TEAM MARVE", "MAN VS BABY", "BOB THISSEN", "DABBLE AND TRAVEL", "GIRL VS GLOBE", "BACKPACKER STEVE"]
     
