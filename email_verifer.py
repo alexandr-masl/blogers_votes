@@ -1,7 +1,7 @@
 from emailverifier import Client
 from emailverifier import exceptions
 
-client = Client('at_2yv4pTGtZLA0Jpqk05evdnKi02T9d')
+client = Client('API_KEY')
 
 test_mail = "wildproductionvideos@gmail.com"
 
@@ -45,24 +45,3 @@ def verify_email(mail):
             # something else all together.
         
         
-        
-if __name__ == "__main__":
-    
-    # "anymailkjasdhfkshfjkashf@gmail.com"
-
-    # validation_result = verify_email("anymailkjasdhfkshfjkashf@gmail.com")
-
-    # print("-- VALIDATION RES")
-    # print(validation_result)
-
-    # if validation_result["dns"]:
-    #     print("----- DNS VALID")
-    
-    f = open("votes_validation.json", "r")
-    # print(f.read())
-    
-    # f_read = f.read()
-    
-    print(f)
-    
-    print("Index--------> ", f["index"])

@@ -12,6 +12,9 @@ votes_data = dfs["Final with bots-YOP-Poll-Export"]
 
 framed_data = DataFrame.from_dict(votes_data)
 
+print("----> FULL DATA ")
+print(framed_data)
+print("-----------")
 
 work_data_frame = DataFrame()
 work_data_frame['user_name'] = framed_data.iloc[:, 0]
@@ -19,14 +22,18 @@ work_data_frame['email'] =framed_data.iloc[:, 1]
 work_data_frame['date'] =framed_data.iloc[:, 5]
 work_data_frame['date'] =framed_data.iloc[:, 5]
 work_data_frame['vote'] =framed_data.iloc[:, 7]
+work_data_frame['ip'] =framed_data.iloc[:, 4]
+
 
 work_data_frame.reset_index()
 
-print("----> DATA ")
+print("----> WORK DATA ")
 print(work_data_frame)
-print("-----------")
+print("-----------")    
+        
 
 checked_users = len(db.get_users_data())
+
 
 for index, row in work_data_frame[checked_users:].iterrows():
     
